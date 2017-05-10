@@ -23,9 +23,9 @@ public class Driver2 {
 		
 		tree2.insert("a");
 		tree2.insert("anthony");
-		tree2.find("anthony");
+		//System.out.println(tree2.find("anthony"));
 		tree2.insert("basketball");
-		tree2.delete("hey");
+		tree2.delete("a");
 
 		tree2.printInOrderTraversal();
 		System.out.println("\n");
