@@ -33,6 +33,7 @@ public class Trie<E extends Comparable <E>> implements BalancedTree<E>{
 	
 			
 
+@SuppressWarnings("unchecked")
 public E find(E item) {
 	TrieNode<E> current = root;
 	String holder = String.valueOf(item);//Converts generic to string
@@ -54,7 +55,7 @@ public E find(E item) {
 	
 	public void delete(E item) {
 		if(find(item)==null){
-			System.out.println("Can't delete an item that doesn't exist");
+		//System.out.println("Can't delete an item that doesn't exist");
 			return;
 		}
 		TrieNode<E> current = root;
@@ -112,7 +113,8 @@ public E find(E item) {
 		return 0;
 	}
 	
-class TrieNode<E extends Comparable<E>> {
+@SuppressWarnings("hiding")
+class TrieNode<E> {
 		public boolean isEndOfWord;
 		public char item;
 		public int count;

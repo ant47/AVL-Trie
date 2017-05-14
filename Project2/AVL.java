@@ -49,7 +49,9 @@ public class AVL<E extends Comparable<E>> implements BalancedTree<E> {
 	
 	
 	public int isWellFormed() {
-		
+		if(root!=null){
+			return 1;
+		}
 		return 0;
 	}
 	   
